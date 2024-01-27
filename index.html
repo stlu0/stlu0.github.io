@@ -207,19 +207,22 @@
 
 			// Set local storage
 			var slideIx = Number(localStorage.getItem('slideIndex') || 1);
+
 			var slideIndex = slideIx;
 			showSlides(slideIndex);
 
 			// Next/previous controls
 			function plusSlides(n) {
 				showSlides(slideIndex += n);
-				updateLocalStorage();
+				localStorage.setItem('slideIndex', slideIndex);
+				console.log(localStorage.getItem('slideIndex'));
 			}
 
 			// Thumbnail image controls
 			function currentSlides(n) {
 				showSlides(slideIndex = n);
-				updateLocalStorage();
+				localStorage.setItem('slideIndex', slideIndex);
+				console.log(localStorage.getItem('slideIndex'));
 			}
 
 			// Show slides
@@ -227,35 +230,22 @@
 				var i;
 				var slides = document.getElementsByClassName("mySlides");
 				var reqdVars = document.getElementsByClassName("reqdVar");
-
 				if (n > slides.length) {
 					slideIndex = 1;
 				}
 				if (n < 1) {
 					slideIndex = slides.length;
 				}
-
 				for (i = 0; i < slides.length; i++) {
 					slides[i].style.display = "none";
 				}
 				for (i = 0; i < reqdVars.length; i++) {
 					reqdVars[i].className = reqdVars[i].className.replace(" active", "");
 				}
-
-				slides[slideIndex - 1].style.display = "block";
-				reqdVars[slideIndex - 1].className += " active";
+				slides[slideIndex-1].style.display = "block";
+				reqdVars[slideIndex-1].className += " active";
 			}
-
-			// Function to update local storage
-			function updateLocalStorage() {
-				localStorage.setItem('slideIndex', slideIndex);
-				console.log(localStorage.getItem('slideIndex'));
-			}
-
-			// Auto advance slides every 10 seconds (adjust the interval as needed)
-			setInterval(function() {
-				plusSlides(1);
-			}, 10000);  // 10 seconds
-		</script>
+			</script>
+		</div>
 	</body>
 	</html>
