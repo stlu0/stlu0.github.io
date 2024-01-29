@@ -7,6 +7,9 @@
 	<link rel="stylesheet" type="text/css" href="general.css" />
 </head>
 <body>
+
+
+
 	<div class="main" style="display: block">
 		<div class="image-wrapper">
 
@@ -139,6 +142,11 @@
 			<h1>Hello, <span class="flair">S T L U</span></h1>
 		</header>
 
+    <form id="search-form">
+      <input type="search" id="search-box" placeholder="Search..." autocomplete="off">
+        <button type="submit" id="search-button">>Find</button>
+    </form>
+
 		<nav>
 			<br>
 			<ul class="blue">
@@ -245,7 +253,20 @@
 				slides[slideIndex-1].style.display = "block";
 				reqdVars[slideIndex-1].className += " active";
 			}
-			</script>
+			
+      const searchForm = document.getElementById('search-form');
+      const searchBox = document.getElementById('search-box');
+
+      searchForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const searchTerm = searchBox.value;
+        const url = `https://search.brave.com/search?q=${searchTerm}`;
+
+      window.open(url, '_blank').focus();
+      });
+
+      </script>
 		</div>
 	</body>
 	</html>

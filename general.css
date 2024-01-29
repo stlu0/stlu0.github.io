@@ -183,3 +183,48 @@ ul[class=yellow] > li > a:hover {
   color: #edd934;
   transition: all 0.5s;
 }
+
+ul > a {
+    color: #A886FD; 
+}
+
+ul > a:hover {
+    color: #C8B4FB; 
+}
+
+
+#search-form {
+    margin-top: 20px;
+    text-align: center;
+    margin-right: -80px;
+}
+
+#search-box {
+    width: 300px;
+    padding: 10px; 
+    font-size: 15px;
+    border: 0.5px hidden #ddd; 
+    border-radius: 25px;
+    outline: none;
+    transition: box-shadow 0.5s ease;
+}
+
+#search-box:focus {
+  box-shadow: 0 0 7px #EEE8FF;
+  }
+
+#search-button {
+    padding: 10px 9px;
+    font-size: 16px;
+    background-color: #A886FD; 
+    color: #fff; 
+    border: none; 
+    border-radius: 25px; 
+    cursor: pointer;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+  }
+
+#search-button:hover {
+    background-color: #C8B4FB;
+    box-shadow: 0 0 5px #C8B4FB;
+}
