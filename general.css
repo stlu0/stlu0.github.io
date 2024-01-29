@@ -7,7 +7,7 @@ body {
   font-family: 'Iosevka', monospace;
   font-size: 20px;
   /* background-color: #0F0F12; */
-  background-color: #181A1B;
+  background-color: #1A1B26;
   background-image: url("img/");
   background-repeat: repeat;
   width: 670px;
@@ -36,7 +36,7 @@ h1 {
   display: inline-block;
   border-style: solid;
   border-width: 1px;
-  border-color: #232328;
+  border-color: #3E3F47;
   position: relative;
   top: -100px;
   width: 770px;
@@ -44,7 +44,8 @@ h1 {
   left: -200px;
   right: 0px;
   margin: auto;
-  background-color: #18181D;
+  /* background-color: #18181D; */
+  background-color: #1D1F2B;
   text-align: center;
 }
 
@@ -137,7 +138,8 @@ ul {
   horizontal-align: middle;
   text-align: center;
   height: 100%;
-  border-color: #232328;
+  /* border-color: #232328; */
+  border-color: #3E3F47;
   border-right-width: 1px;
   border-right-style: solid;
   padding: 10px 25px;
